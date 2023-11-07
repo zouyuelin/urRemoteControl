@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+     <include file="$(find ur_robot_driver)/launch/ur5_bringup.launch" pass_all_args="true"/>
+    <node name="raw_force" pkg="forceSRI" type="sri_sensor.py" respawn="false" output="screen"/>
+    <!--force sensor -->
+    <node name="dragging" pkg="ultrasound" type="dragging" respawn="false" output="screen"/>
+    <!--UR Driver  -->
+   
+
+</launch>
