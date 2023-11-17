@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+    <!--force sensor -->
+    <node name="raw_force" pkg="forceSRI" type="sri_sensor.py" respawn="false" output="screen"/>
+    <!--force sensor -->
+    <!--UR Driver  -->
+    <include file="$(find ur_robot_driver)/launch/ur5_bringup.launch" pass_all_args="true"/>
+    <node name="omegaNode" pkg="masterSlaveOmega" type="haptic_ros_driver" respawn="false" output="screen"/>
+
+
+</launch>
